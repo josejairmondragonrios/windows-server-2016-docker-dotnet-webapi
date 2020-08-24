@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  webapi-dotnet-core:
+    container_name: webapi-dotnet-core
+    build: .
+    ports:
+      - 5000:5000
+      - 5001:5001
+    networks:
+      - default
+networks:
+  default:
+    external: true
+    name: nat
